@@ -1,0 +1,32 @@
+<div>
+  <div class="node" [style.padding-left]="level * 20 + 'px'">
+    <button
+      (click)="childrenHidden = !childrenHidden"
+      style="background: transparent; border: none"
+      [style.visibility]="node.children.length < 1 ? 'hidden' : 'visible'"
+    >
+      {{ childrenHidden ? "▶️" : "🔽" }}
+    </button>
+    <input
+      [checked]="node.isChecked"
+      type="checkbox"
+      [indeterminate]="indeterminate"
+      (change)="toggleNodeChecked()"
+    />
+    <!-- <input
+      [checked]="checkedState === 'checked'"
+      type="checkbox"
+      [indeterminate]="checkedState === 'indeterminate'"
+      (change)="toggleNodeChecked()"
+    /> -->
+    <span>{{ node.msId }}</span>
+    <span>{{ node.planName }}</span>
+  </div>
+  <ng-container *ngIf="!childrenHidden">
+    <app-tree-node
+      *ngFor="let child of node.children"
+      [node]="child"
+      [level]="level + 1"
+    ></app-tree-node>
+  </ng-container>
+</div>

@@ -1,0 +1,8 @@
+.node {
+  display: flex;
+  gap: 1rem;
+  /* margin-bottom: 0.75rem; */
+  align-items: center;
+  border-bottom: solid rgba(211, 211, 211, 0.392) 1px;
+  padding: 0.2rem 0;
+}
