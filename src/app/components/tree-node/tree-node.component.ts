@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ITreeNode } from '../../services/tree.service';
 
-type ICheckedState = 'unchecked' | 'indeterminate' | 'checked';
+// type ICheckedState = 'unchecked' | 'indeterminate' | 'checked';
 
 @Component({
   selector: 'app-tree-node',

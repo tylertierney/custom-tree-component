@@ -2,17 +2,14 @@
   "tree": {
     "msId": "123",
     "planName": "First Plan Name",
-    "isChecked": false,
     "children": [
       {
         "msId": "456",
         "planName": "Second Plan Name",
-        "isChecked": false,
         "children": [
           {
             "msId": "222",
             "planName": "Whatever",
-            "isChecked": false,
             "children": []
           }
         ]
@@ -20,7 +17,6 @@
       {
         "msId": "789",
         "planName": "Third Plan Name",
-        "isChecked": false,
         "children": []
       }
     ]
